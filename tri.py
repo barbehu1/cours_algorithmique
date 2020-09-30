@@ -1,22 +1,12 @@
 liste = [1, 2, 3, 4, 5]
 
 def inverse(a):
-    a.reverse()
-    return a
+    print(a)
+    n = len(liste)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if a[j] < a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
+            print(a)
 
-print(inverse(liste))
-
-print(liste)
-
-
-liste = [1, 2, 3, 4, 5]
-b = []
-
-def inverse(a):
-    global b
-    b = a.reverse()
-    return b
-
-print(inverse(liste))
-
-print(liste)
+inverse(liste)
